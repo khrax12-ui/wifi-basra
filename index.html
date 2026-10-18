@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مكتب Wi-Fi | إنترنت في البصرة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F1F6FA;--card:#FFFFFF;--ink:#10263A;--muted:#5A7082;--line:#DCE7EF;
+  --primary:#0A7FB5;--primary-d:#075F8A;--navy:#0B2A44;--amber:#FFB703;--amber-ink:#10263A;--shadow:0 6px 20px rgba(16,38,58,.08);
+  box-sizing:border-box;padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0A1823;--card:#102535;--ink:#EAF3F8;--muted:#9FB6C5;--line:#1E3B50;--primary:#35B6E6;--primary-d:#1D8FBF;--navy:#06121B;--shadow:0 6px 20px rgba(0,0,0,.35);}
+}
+:root[data-theme="dark"]{--bg:#0A1823;--card:#102535;--ink:#EAF3F8;--muted:#9FB6C5;--line:#1E3B50;--primary:#35B6E6;--primary-d:#1D8FBF;--navy:#06121B;--shadow:0 6px 20px rgba(0,0,0,.35);}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Cairo,Tahoma,Arial,sans-serif;font-size:16.5px;line-height:1.8}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 18px}
+
+/* navbar */
+.nav{position:sticky;top:0;z-index:20;background:var(--card);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px}
+.menu{display:flex;gap:6px;align-items:center}
+.menu a{padding:8px 14px;border-radius:10px;font-weight:600;color:var(--muted)}
+.menu a:hover{background:var(--bg);color:var(--primary)}
+.menu a.cta{background:var(--amber);color:var(--amber-ink);font-weight:700}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:10px;width:44px;height:44px;cursor:pointer;color:var(--ink);font-size:22px}
+@media (max-width:760px){
+  .burger{display:block}
+  .menu{display:none;position:absolute;top:100%;inset-inline:0;background:var(--card);flex-direction:column;align-items:stretch;padding:10px 18px 16px;border-bottom:1px solid var(--line);box-shadow:var(--shadow)}
+  .menu.open{display:flex}
+  .menu a{padding:12px 14px}
+}
+
+/* hero */
+.hero{background:linear-gradient(135deg,var(--navy) 0%,#0A5C8C 100%);color:#fff;padding:52px 0 60px}
+.hero .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center}
+.hero h1{font-size:clamp(28px,5.5vw,44px);line-height:1.4;margin:0 0 14px;font-weight:800}
+.hero p{margin:0 0 26px;color:#CFE3EE;font-size:18px;max-width:30em}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 26px;border-radius:12px;font-weight:700;border:2px solid transparent;cursor:pointer;font-family:inherit;font-size:16px}
+.btn.amber{background:var(--amber);color:var(--amber-ink)}
+.btn.ghost{border-color:rgba(255,255,255,.5);color:#fff}
+.panel{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:24px;padding:28px;text-align:center}
+.panel svg{width:130px;height:130px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px}
+.chips span{background:rgba(255,255,255,.14);padding:4px 14px;border-radius:999px;font-size:14.5px}
+@media (max-width:760px){.hero .wrap{grid-template-columns:1fr}.panel{padding:20px}.panel svg{width:90px;height:90px}}
+
+/* sections */
+section{padding:48px 0}
+.title{text-align:center;margin-bottom:28px}
+.title h2{margin:0 0 4px;font-size:clamp(24px,4vw,32px);font-weight:800}
+.title p{margin:0;color:var(--muted)}
+.grid{display:grid;gap:18px}
+.g4{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.g5{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:var(--shadow)}
+.icon{width:54px;height:54px;border-radius:14px;background:color-mix(in srgb,var(--primary) 14%,transparent);display:grid;place-items:center;font-size:26px;margin-bottom:12px}
+.card h3{margin:0 0 6px;font-size:19px}
+.card p{margin:0;color:var(--muted);font-size:15.5px}
+
+/* packages */
+.pkg{text-align:center;display:flex;flex-direction:column;gap:6px;transition:transform .15s}
+.pkg:hover{transform:translateY(-4px)}
+.pkg .name{display:inline-block;align-self:center;background:var(--primary);color:#fff;font-weight:800;padding:2px 18px;border-radius:999px;direction:ltr}
+.pkg .price{font-size:34px;font-weight:800;color:var(--ink);line-height:1.2;margin-top:8px}
+.pkg .cur{color:var(--muted);font-size:15px;margin-bottom:10px}
+.pkg ul{list-style:none;margin:0 0 14px;padding:10px 0 0;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+.pkg li::before{content:"✓ ";color:var(--primary);font-weight:700}
+.pkg .btn{background:var(--primary);color:#fff;margin-top:auto;padding:10px 12px}
+.pkg .btn:hover{background:var(--primary-d)}
+
+/* coverage */
+.area h3{display:flex;align-items:center;gap:8px;color:var(--primary)}
+.area ul{margin:8px 0 0;padding:0;list-style:none}
+.area li{padding:8px 0;border-top:1px solid var(--line);font-size:15.5px}
+.area li::before{content:"📍 ";font-size:14px}
+
+/* steps */
+.step b{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--amber);color:var(--amber-ink);font-size:19px;margin-bottom:10px}
+
+/* contact */
+.contact{background:var(--navy);color:#fff}
+.contact .title p{color:#B8D0DE}
+.contact .card{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);box-shadow:none;text-align:center}
+.contact .card p{color:#CFE3EE;direction:ltr;unicode-bidi:plaintext}
+.contact .card .btn{margin-top:12px;padding:9px 22px}
+footer{background:#071C2E;color:#9FB6C5;text-align:center;padding:20px 18px calc(20px + env(safe-area-inset-bottom,0px));font-size:14.5px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.pkg{transition:none}}
+
+.page{display:none}.page.active{display:block}
+.menu a.active{color:var(--primary);background:var(--bg)}
+.banner{background:linear-gradient(135deg,var(--navy) 0%,#0A5C8C 100%);color:#fff;text-align:center;padding:34px 0}
+.banner h1{margin:0 0 4px;font-size:clamp(26px,5vw,36px);font-weight:800}
+.banner p{margin:0;color:#CFE3EE}
+.link{display:block;transition:transform .15s}
+.link:hover{transform:translateY(-4px)}
+.link .more{display:inline-block;margin-top:10px;color:var(--primary);font-weight:700}
+.btn.solid{background:var(--primary);color:#fff;display:block;text-align:center;margin-top:10px;padding:10px 16px;direction:ltr}
+.btn.solid:hover{background:var(--primary-d)}
+.contact-card{text-align:center}
+.contact-card p{margin-bottom:6px}
+.pkgs-note{text-align:center;color:var(--muted);margin-top:22px;font-size:15px}
+footer .nums{direction:ltr;display:inline-block;margin-top:4px}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="#home">
+      <svg width="38" height="38" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#0A7FB5"/><path d="M8 17a17 17 0 0 1 24 0M12.5 22a11 11 0 0 1 15 0M17 27a5 5 0 0 1 6 0" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="20" cy="32" r="2.5" fill="#FFB703"/></svg>
+      <span>مكتب <bdi dir="ltr">Wi-Fi</bdi></span>
+    </a>
+    <button class="burger" id="burger" aria-label="القائمة" aria-expanded="false">☰</button>
+    <div class="menu" id="menu">
+      <a href="#home" data-p="home">الرئيسية</a>
+      <a href="#services" data-p="services">الخدمات</a>
+      <a href="#packages" data-p="packages">الباقات</a>
+      <a href="#coverage" data-p="coverage">التغطية</a>
+      <a class="cta" href="#contact" data-p="contact">تواصل معنا</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<div class="page" id="page-home">
+  <header class="hero">
+    <div class="wrap">
+      <div>
+        <h1>إنترنت سريع وثابت في البصرة</h1>
+        <p>مكتب Wi-Fi يوصّل لك الاشتراك ويركّبه ويتابعه معك، من ٥ ميل إلى الجزيرة وأبو الخصيب.</p>
+        <div class="btns">
+          <a class="btn amber" href="#packages">شاهد الباقات</a>
+          <a class="btn ghost" href="#contact">تواصل معنا</a>
+        </div>
+      </div>
+      <div class="panel" aria-hidden="true">
+        <svg viewBox="0 0 40 40"><path d="M5 15a21 21 0 0 1 30 0M10 21a14 14 0 0 1 20 0M15 27a7 7 0 0 1 10 0" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="20" cy="33" r="3" fill="#FFB703"/></svg>
+        <div class="chips"><span>٥ ميل</span><span>الجزيرة</span><span>أبو الخصيب</span></div>
+      </div>
+    </div>
+  </header>
+  <section>
+    <div class="wrap">
+      <div class="title"><h2>تعرّف علينا</h2><p>اختر ما تريد معرفته</p></div>
+      <div class="grid g4">
+        <a class="card link" href="#services"><div class="icon">🛠️</div><h3>الخدمات</h3><p>اشتراكات منزلية وللمحلات، مع التركيب والدعم.</p><span class="more">عرض الخدمات</span></a>
+        <a class="card link" href="#packages"><div class="icon">📦</div><h3>الباقات</h3><p>خمس باقات بأسعار واضحة، تبدأ من 35,000 د.ع.</p><span class="more">عرض الباقات</span></a>
+        <a class="card link" href="#coverage"><div class="icon">📍</div><h3>التغطية</h3><p>نغطي مناطق في الجزيرة و٥ ميل وأبو الخصيب.</p><span class="more">عرض المناطق</span></a>
+        <a class="card link" href="#contact"><div class="icon">📞</div><h3>تواصل معنا</h3><p>اتصل أو راسلنا على واتساب للاشتراك.</p><span class="more">أرقام المكتب</span></a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="page" id="page-services">
+  <div class="banner"><div class="wrap"><h1>خدماتنا</h1><p>كل ما تحتاجه للاتصال بالإنترنت في مكان واحد</p></div></div>
+  <section>
+    <div class="wrap">
+      <div class="grid g4">
+        <div class="card"><div class="icon">🏠</div><h3>اشتراكات منزلية</h3><p>باقات مناسبة للعائلة والدراسة والعمل من البيت.</p></div>
+        <div class="card"><div class="icon">🏪</div><h3>للمحلات والشركات</h3><p>اتصال مستقر يخدم عملك طوال ساعات الدوام.</p></div>
+        <div class="card"><div class="icon">🔧</div><h3>التركيب والتفعيل</h3><p>نأتيك ونركّب الجهاز ونفعّل الخدمة حتى تعمل أمامك.</p></div>
+        <div class="card"><div class="icon">🎧</div><h3>الدعم والصيانة</h3><p>نتابع الأعطال ونصلحها بأسرع وقت ممكن.</p></div>
+      </div>
+    </div>
+  </section>
+  <section style="padding-top:8px">
+    <div class="wrap">
+      <div class="title"><h2>كيف تشترك؟</h2><p>أربع خطوات فقط</p></div>
+      <div class="grid g4">
+        <div class="card step"><b>١</b><h3>تواصل معنا</h3><p>اتصل أو راسلنا على واتساب وأخبرنا بموقعك.</p></div>
+        <div class="card step"><b>٢</b><h3>اختر الباقة</h3><p>نحدد معك الباقة الأنسب لاستخدامك.</p></div>
+        <div class="card step"><b>٣</b><h3>التركيب والتفعيل</h3><p>نحدد موعدًا ونركّب الخدمة عندك.</p></div>
+        <div class="card step"><b>٤</b><h3>استمتع وجدّد</h3><p>نذكّرك بموعد التجديد ونبقى على تواصل.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="page" id="page-packages">
+  <div class="banner"><div class="wrap"><h1>الباقات</h1><p>اسم كل باقة هو سعرها بالدينار العراقي</p></div></div>
+  <section>
+    <div class="wrap">
+      <div class="grid g5">
+        <div class="card pkg"><span class="name">P1</span><div class="price">35,000</div><div class="cur">د.ع</div><ul><li>تركيب وتفعيل</li><li>دعم فني</li></ul><a class="btn" data-wa="P1" href="#contact">اشترك الآن</a></div>
+        <div class="card pkg"><span class="name">P2</span><div class="price">40,000</div><div class="cur">د.ع</div><ul><li>تركيب وتفعيل</li><li>دعم فني</li></ul><a class="btn" data-wa="P2" href="#contact">اشترك الآن</a></div>
+        <div class="card pkg"><span class="name">P3</span><div class="price">50,000</div><div class="cur">د.ع</div><ul><li>تركيب وتفعيل</li><li>دعم فني</li></ul><a class="btn" data-wa="P3" href="#contact">اشترك الآن</a></div>
+        <div class="card pkg"><span class="name">P4</span><div class="price">75,000</div><div class="cur">د.ع</div><ul><li>تركيب وتفعيل</li><li>دعم فني</li></ul><a class="btn" data-wa="P4" href="#contact">اشترك الآن</a></div>
+        <div class="card pkg"><span class="name">P5</span><div class="price">120,000</div><div class="cur">د.ع</div><ul><li>تركيب وتفعيل</li><li>دعم فني</li></ul><a class="btn" data-wa="P5" href="#contact">اشترك الآن</a></div>
+      </div>
+      <p class="pkgs-note">زر "اشترك الآن" يفتح محادثة واتساب مع المكتب باسم الباقة.</p>
+    </div>
+  </section>
+</div>
+
+<div class="page" id="page-coverage">
+  <div class="banner"><div class="wrap"><h1>مناطق التغطية</h1><p>مركزنا في البصرة، ٥ ميل، ونغطي مناطق أخرى حولها</p></div></div>
+  <section>
+    <div class="wrap">
+      <div class="grid g3">
+        <div class="card area"><h3>الجزيرة</h3><ul><li>زين العابدين</li><li>شارع الصقر</li></ul></div>
+        <div class="card area"><h3>٥ ميل</h3><ul><li>حي المثلث</li><li>شارع الصناعية / الجمعيات</li><li>الجمعيات مقابل ساحة الصلاة</li></ul></div>
+        <div class="card area"><h3>أبو الخصيب</h3><ul><li>عويسيان</li></ul></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="page" id="page-contact">
+  <div class="banner"><div class="wrap"><h1>تواصل معنا</h1><p>نردّ عليك بأسرع وقت</p></div></div>
+  <section>
+    <div class="wrap">
+      <div class="grid g3">
+        <div class="card contact-card"><div class="icon" style="margin-inline:auto">📞</div><h3>اتصل بالمكتب</h3><a class="btn solid" href="tel:+9647718319066">0771 831 9066</a><a class="btn solid" href="tel:+9647827089762">0782 708 9762</a></div>
+        <div class="card contact-card"><div class="icon" style="margin-inline:auto">💬</div><h3>واتساب</h3><p>راسلنا مباشرة وسنرد عليك</p><a class="btn solid" data-wa="" href="#contact">0771 831 9066</a></div>
+        <div class="card contact-card"><div class="icon" style="margin-inline:auto">📍</div><h3>موقع المكتب</h3><p>البصرة، ٥ ميل</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<footer>© مكتب Wi-Fi — البصرة، ٥ ميل<br><span class="nums">0771 831 9066 · 0782 708 9762</span></footer>
+
+<script>
+(function(){
+  var PHONE="9647718319066";
+  var pages=['home','services','packages','coverage','contact'];
+  var b=document.getElementById('burger'),m=document.getElementById('menu');
+  function show(){
+    var h=location.hash.replace('#','');
+    if(pages.indexOf(h)<0)h='home';
+    pages.forEach(function(p){document.getElementById('page-'+p).classList.toggle('active',p===h)});
+    document.querySelectorAll('.menu a[data-p]').forEach(function(a){a.classList.toggle('active',a.getAttribute('data-p')===h)});
+    m.classList.remove('open');b.setAttribute('aria-expanded','false');
+    window.scrollTo(0,0);
+  }
+  b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+  window.addEventListener('hashchange',show);
+  document.querySelectorAll('[data-wa]').forEach(function(a){
+    var p=a.getAttribute('data-wa');
+    var t=p?'مرحبا، أريد الاشتراك بباقة '+p:'مرحبا، أريد الاستفسار عن الاشتراك';
+    a.href='https://wa.me/'+PHONE+'?text='+encodeURIComponent(t);
+  });
+  show();
+})();
+</script>
+</body>
+</html>
